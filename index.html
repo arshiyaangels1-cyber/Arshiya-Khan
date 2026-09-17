@@ -70,6 +70,15 @@
             50%{box-shadow:0 0 40px rgba(233,30,99,.8);}
         }
 
+        .shine-effect{position:relative;overflow:hidden;}
+        .shine-effect::after{
+            content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;
+            background:linear-gradient(120deg,transparent,rgba(255,255,255,.5),transparent);
+            transform:skewX(-20deg);
+        }
+        .shine-effect:hover::after{animation:shineSweep 1s;}
+        @keyframes shineSweep{100%{left:125%;}}
+
         .open-any{
             background:linear-gradient(135deg,var(--wa-green),var(--wa-dark)) !important;
             color:var(--white) !important;
@@ -146,12 +155,6 @@
         .gallery-overlay{position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(136,14,79,0.8)); padding: 20px; color: white; opacity: 0; transition: opacity 0.3s;}
         .gallery-item:hover .gallery-overlay{opacity: 1;}
 
-        .mentor-photo-placeholder{
-            width:100%;aspect-ratio:4/5;border-radius:16px;background:linear-gradient(135deg,var(--lightest),var(--light));
-            display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem;color:var(--darkest);
-            border:2px dashed var(--accent);text-align:center;padding:1rem;
-        }
-
         @media(max-width:768px){
             section{padding:40px 0;}
             .hero-section{padding:50px 0 30px;}
@@ -196,7 +199,7 @@
     </div>
 </section>
 
-<!-- ===== ABOUT ===== -->
+<!-- ===== ABOUT / FULL IMAGE ===== -->
 <section class="py-5" style="background: linear-gradient(135deg, var(--lightest), #FFF5F7);">
     <div class="container">
         <div class="row g-4 align-items-center">
@@ -223,11 +226,11 @@
                     <h3 class="h5 fw-bold mb-2" style="color:var(--accent);">🎯 My Vision:</h3>
                     <p class="fs-5 fw-semibold mb-0">"Ek Housewife se Digital Coach tak — Ab Aapki Baari!"</p>
                 </div>
-                <button class="open-any mb-4">📲 Connect on WhatsApp</button>
+                <button class="open-any mb-4 shine-effect">📲 Connect on WhatsApp</button>
                 <div class="row g-3">
-                    <div class="col-md-4"><div class="stat-card"><div class="counter" data-target="3" data-suffix="+">0</div><p>Years as Lecturer</p></div></div>
-                    <div class="col-md-4"><div class="stat-card"><div class="counter" data-target="3" data-suffix="+">0</div><p>Years Digital Coach</p></div></div>
-                    <div class="col-md-4"><div class="stat-card"><div class="counter" data-target="700" data-suffix="+">0</div><p>Women Trained</p></div></div>
+                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="3" data-suffix="+">0</div><p>Years as Lecturer</p></div></div>
+                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="3" data-suffix="+">0</div><p>Years Digital Coach</p></div></div>
+                    <div class="col-md-4"><div class="stat-card shine-effect"><div class="counter" data-target="700" data-suffix="+">0</div><p>Women Trained</p></div></div>
                 </div>
             </div>
         </div>
@@ -241,23 +244,23 @@
         <p class="text-center text-muted mb-4">Screenshots from our community members</p>
 
         <div class="gallery-grid">
-            <div class="gallery-item">
+            <div class="gallery-item shine-effect">
                 <img src="https://i.ibb.co/29C3TT2/Whats-App-Image-2026-09-15-at-6-20-07-PM.jpg" alt="Student Feedback 1" loading="lazy">
                 <div class="gallery-overlay">Community Feedback</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item shine-effect">
                 <img src="https://i.ibb.co/sJNkFD2b/Whats-App-Image-2026-09-15-at-6-20-08-PM.jpg" alt="Student Feedback 2" loading="lazy">
                 <div class="gallery-overlay">Community Feedback</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item shine-effect">
                 <img src="https://i.ibb.co/yvKdXNV/Whats-App-Image-2026-09-15-at-6-20-09-PM.jpg" alt="Student Feedback 3" loading="lazy">
                 <div class="gallery-overlay">Community Feedback</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item shine-effect">
                 <img src="https://i.ibb.co/D0jG6ZK/Whats-App-Image-2026-09-15-at-6-20-08-PM.jpg" alt="Student Feedback 4" loading="lazy">
                 <div class="gallery-overlay">Community Feedback</div>
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item shine-effect">
                 <img src="https://i.ibb.co/0R7CmZ1L/Whats-App-Image-2026-09-15-at-6-15-29-PM.jpg" alt="Student Feedback 5" loading="lazy">
                 <div class="gallery-overlay">Community Feedback</div>
             </div>
@@ -271,7 +274,7 @@
         <h2 class="text-center display-5 fw-bold mb-4" style="color:var(--primary);">What Happens When You Join?</h2>
         <div class="row g-3">
             <div class="col-md-6 col-lg-3">
-                <div class="step-card">
+                <div class="step-card shine-effect">
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">1</div>
                         <div>
@@ -282,7 +285,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="step-card">
+                <div class="step-card shine-effect">
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">2</div>
                         <div>
@@ -293,7 +296,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="step-card">
+                <div class="step-card shine-effect">
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">3</div>
                         <div>
@@ -304,7 +307,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="step-card">
+                <div class="step-card shine-effect">
                     <div class="d-flex align-items-start gap-3">
                         <div class="step-number">4</div>
                         <div>
@@ -315,7 +318,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5"><button class="open-any">📲 Get Started Now</button></div>
+        <div class="text-center mt-5"><button class="open-any shine-effect">📲 Get Started Now</button></div>
     </div>
 </section>
 
@@ -395,6 +398,12 @@
             </div>
             <p class="fs-6 fw-semibold mb-3" style="color:var(--accent);">📌 Save My Number: 9765836331</p>
             <button class="open-any glow-pulse" style="background:var(--white);color:var(--accent);border:2px solid var(--accent);">📲 Message on WhatsApp Now</button>
+            <div class="text-center mt-4">
+                <!-- TODO: replace href with Arshiya's real Instagram profile link -->
+                <a href="https://www.instagram.com/" target="_blank" class="btn btn-outline-dark btn-lg d-inline-flex align-items-center gap-2">
+                    <i data-lucide="instagram" width="24"></i>Follow on Instagram
+                </a>
+            </div>
         </div>
         <div class="card border-0 p-3 mb-3" style="background:rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,0.3);">
             <h4 class="h5 fw-bold mb-2">⏳ Within 24 hours:</h4>
@@ -505,8 +514,9 @@
     const privacyModal=document.getElementById('privacyModal');
     const privacyBtn=document.getElementById('privacyBtn');
     const closePrivacyBtn=document.getElementById('closePrivacyBtn');
-    // TODO: point this to Arshiya's own Google Sheet Apps Script URL for lead logging
-    const SCRIPT_URL="REPLACE_WITH_GOOGLE_SCRIPT_URL";
+    // IMPORTANT: this must be ARSHIYA'S OWN Google Apps Script URL (her own Google Sheet).
+    // Do not reuse Faizeen's script URL here — that would send Arshiya's leads into Faizeen's sheet.
+    const SCRIPT_URL="REPLACE_WITH_ARSHIYA_OWN_GOOGLE_SCRIPT_URL";
     const WA_NUMBER_INT="919765836331";
 
     function openForm(source='site'){
@@ -545,11 +555,9 @@
         const gender=document.getElementById('inp_gender').value;
         const profession=document.getElementById('inp_profession').value;
         if(!name||phone.length<6||!age||!gender||!profession){alert('Please fill all fields correctly.');return;}
-        if(SCRIPT_URL && SCRIPT_URL.indexOf('REPLACE_WITH')===-1){
-            const formData=new FormData();
-            formData.append('name',name);formData.append('phone',phone);formData.append('age',age);formData.append('gender',gender);formData.append('profession',profession);formData.append('source',sourceInfo.value);formData.append('timestamp',new Date().toISOString());
-            fetch(SCRIPT_URL,{method:'POST',body:formData,mode:'no-cors'}).catch(()=>{});
-        }
+        const formData=new FormData();
+        formData.append('name',name);formData.append('phone',phone);formData.append('age',age);formData.append('gender',gender);formData.append('profession',profession);formData.append('source',sourceInfo.value);formData.append('timestamp',new Date().toISOString());
+        fetch(SCRIPT_URL,{method:'POST',body:formData,mode:'no-cors'}).catch(()=>{});
         const msg=encodeURIComponent(`Hello Ma'am,\n\nI am interested in your women-only program. Here are my details:\n\nName: ${name}\nPhone: ${phone}\nAge: ${age}\nGender: ${gender}\nProfession: ${profession}\n\nPlease share next steps. Thank you!`);
         if(typeof fbq!=='undefined'){fbq('track','Contact');}
         window.open(`https://wa.me/${WA_NUMBER_INT}?text=${msg}`,'_blank');
